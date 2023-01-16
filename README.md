@@ -3,8 +3,14 @@ making stringline plots
 
 this is a very crude way to plot stringlines
 
+Use the main_stringlines.py file to plot the stringlines for stops in the Isrealy railway network. There are a few examples of lists of ids for plots you can print.
+if you want to make a plot with differentstations, I recommend using the stops.txt and the rail map to create the needed `control_stops` list.
+
+
 enjoy!
 
+        Parameters
+        ----------
         control_stop : list
             list of stations by which the stop_times is filtered by
         sp_stop_id : list, optional
