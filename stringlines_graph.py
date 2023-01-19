@@ -149,11 +149,10 @@ class Stringlines:
             plt.plot(self.departure_time,self.stops_y,marker='o')
 
 
-        bx = plt.axes()
         hours = mdates.HourLocator(interval = 1)
         h_fmt = mdates.DateFormatter('%H:%M')
-        bx.xaxis.set_major_locator(hours)
-        bx.xaxis.set_major_formatter(h_fmt)
+        plt.gca().xaxis.set_major_locator(hours)
+        plt.gca().xaxis.set_major_formatter(h_fmt)
 
         plt.title(label=self.title,fontsize=25)
 
