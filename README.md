@@ -1,6 +1,6 @@
 # Stringlines
 
-making stringline plots from Israel Railways GTFS data.
+Making stringline plots from Israel Railways GTFS data.
 
 
 
