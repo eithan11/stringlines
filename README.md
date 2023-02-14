@@ -1,33 +1,22 @@
-# stringlines
-making stringline plots
+# Stringlines
 
-this is a very crude way to plot stringlines
-
-Use the `main_stringlines.py` file to plot the stringlines for stops in the Isrealy railway network. There are a few examples of lists of ids for plots you can print.
-if you want to make a plot with differentstations, I recommend using the `stops.txt` and the rail map to create the needed `control_stops` list.
-
-I added the folder `gtfs_rail_only` with the relevant GTFS files. It contains only the data for rail trips for shorter computation time. 
-If you wish to use other GTFS data you will need to change the `folder` variable in `main_stringlines.py`.
+making stringline plots from Israel Railways GTFS data.
 
 
-enjoy!
 
-        Parameters
-        ----------
-        control_stop : list
-            list of stations by which the stop_times is filtered by
-        sp_stop_id : list, optional
-            list of stations to display (default is sp_stop_id = control_stop)
+## Getting started
 
-            !!! important !!!
-            the station ids must be in order of arrival
-        weekday : str, optional
-            what weekday to show
-        direction : int, optional
-            0 is northbound trains only, 1 is southbound trains only, 3 is both directions (default is 0)
-        start_time : str, optional
-            start time of graph in the format 'HH:MM:SS'
-        end_time : str, optional
-            end time of graph in the format 'HH:MM:SS'
-        title : str, optional
-            title of the graph (default is first and last stations)
+This code can be used with general GTFS files but it is recommended to use the `gtfs_rail_18-01-2023` folder for ease of computation and a few fixed issues.
+
+Set the date. If you are using the `gtfs_rail_18-01-2023` folder, only january 2023 is supported.
+
+Set `STOPS_TO_FILTER_BY` `STOPS_TO_DISPLAY` `STOPSֹֹ_TO_REMOVE_BY` using `rail_branches.py` as a reference or try the given examples.
+`STOPS_TO_DISPLAY` need to be set in order from north to south. 
+
+Set `direction` 0 for northbound 1 for southbound anything else for both. Some examples have this set already.
+
+
+## Background
+
+Usually when using GTFS data you choose routes using the `routes.txt` file but in the data for Israel Railways is a bit different than buses.
+I filtered the data using stations instead of routes because it is more intuitive when looking at trains.
